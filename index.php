@@ -39,7 +39,7 @@ require 'data/Corretor.php';
         <div>
           <input type="text" name="id" id="id_edit" readonly hidden>
           <input class="cpf" id="cpf" type="text" name="cpf" pattern="[0-9]{11}" placeholder="Digite seu CPF" required oninput="setCustomValidity('');" oninvalid="setCustomValidity('CPF deve ter 11 caracteres!');" />
-          <input class="creci" id="creci" type="text" name="creci" minlength="2" placeholder="Digite seu Creci" required oninput="setCustomValidity('');" oninvalid="setCustomValidity('Creci deve ter pelo menos 2 caracteres!');" />
+          <input class="creci" id="creci" type="text" name="creci" pattern="[0-9]{2,8}" placeholder="Digite seu Creci" required oninput="setCustomValidity('');" oninvalid="setCustomValidity('Creci deve ter pelo menos 2 caracteres e no máximo 8 caracteres!');" />
         </div>
         <input class="nome" id="nome" type="text" name="nome" minlength="2" placeholder="Digite seu nome" required oninput="setCustomValidity('');" oninvalid="setCustomValidity('Nome deve ter pelo menos 2 caracteres!');" />
         <button class="enviar" id="enviar">Enviar</button>
